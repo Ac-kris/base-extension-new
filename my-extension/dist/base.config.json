@@ -1,8 +1,0 @@
-{
-    "name": "月度制备费汇总",
-    "version": "1.0.0",
-    "description": "生成月度制备费汇总报表，帮助用户快速汇总和分析月度制备费数据",
-    "main": "dist/index.html",
-    "author": "lark-base-monthly-summary",
-    "license": "MIT"
-  }
