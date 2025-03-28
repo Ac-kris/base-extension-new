@@ -1,0 +1,155 @@
+/* 基于飞书Base开放设计规范的自定义样式 */
+
+/* 主题颜色 */
+:root {
+  --primary-color: #2e6be6;
+  --background-color: #f5f6f7;
+  --border-color: #e5e6e8;
+  --text-primary: rgba(0, 0, 0, 0.9);
+  --text-secondary: rgba(0, 0, 0, 0.6);
+  --text-tertiary: rgba(0, 0, 0, 0.4);
+  --container-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 界面容器样式优化 - 适配整个边栏高度 */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 标题样式 */
+h1, h2, h3 {
+  color: var(--text-primary);
+  margin-top: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+/* 表单容器 - 新增，用于垂直居中整个表单 */
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* 表单项样式增强 */
+.form-item {
+  margin-bottom: 32px;
+}
+
+.form-item label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+/* 选择器和按钮样式优化 */
+.ant-select {
+  width: 100%;
+}
+
+.ant-select-selector {
+  border-radius: 4px !important;
+  border-color: var(--border-color) !important;
+  transition: all 0.3s !important;
+  height: 40px !important;
+}
+
+.ant-select-focused .ant-select-selector {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 2px rgba(46, 107, 230, 0.15) !important;
+}
+
+/* 按钮样式 */
+button.ant-btn {
+  height: 44px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: none;
+  transition: all 0.2s ease;
+  margin-top: 24px;
+}
+
+button.ant-btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+button.ant-btn-primary:hover {
+  background-color: #2257c7;
+  border-color: #2257c7;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(46, 107, 230, 0.25);
+}
+
+/* 加载状态样式 */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  min-height: 200px;
+}
+
+.ant-spin {
+  margin-bottom: 16px;
+}
+
+/* 错误消息样式优化 */
+.error-message {
+  margin: 0 auto 40px;
+  max-width: 600px;
+}
+
+.ant-alert {
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 适配移动设备和小尺寸边栏 */
+@media (max-width: 576px) {
+  .container {
+    padding: 16px;
+  }
+  
+  h1 {
+    font-size: 18px;
+    margin-bottom: 24px;
+    margin-top: 16px;
+  }
+  
+  .form-item {
+    margin-bottom: 20px;
+  }
+} 

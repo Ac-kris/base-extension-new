@@ -1,0 +1,31 @@
+{
+  "name": "monthly-preparation-fee-summary",
+  "version": "1.0.0",
+  "description": "生成月度制备费汇总报表",
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "upload": "node upload.js",
+    "upload:cli": "npx @lark-base-open/cli upload ./dist -t gadget -p pc -v patch -d \"更新版本\"",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives"
+  },
+  "author": "lark-base-monthly-summary",
+  "license": "MIT",
+  "dependencies": {
+    "@lark-base-open/js-sdk": "^0.3.4",
+    "antd": "^5.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@lark-base-open/cli": "^1.0.0-alpha.2",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "archiver": "^7.0.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.5.10"
+  }
+}
